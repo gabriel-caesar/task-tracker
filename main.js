@@ -24,11 +24,16 @@ let deletedData = JSON.parse(localStorage.getItem("deleted")) || [];
 let concludedData = JSON.parse(localStorage.getItem("concluded")) || [];
 
 createBtn.addEventListener('click', () => {
+
+  const reformatDate = date => {
+    const [year, month, day] = date.split('-');
+    return `${month}/${day}/${year}`
+  };
   
   taskData.push({
     id: Math.random() * 99,
     tName: taskName.value,
-    dDate: dueDate.value,
+    dDate: reformatDate(dueDate.value),
     location: taskLocation.value,
     type: taskType.value,
     desc: taskDescription.value
