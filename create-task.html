@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/fc2f0cdae5.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Tracker</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="cmain-container" id="cmain-container">
+    <h1><i class="fa-solid fa-list-check"></i> Create your task:</i></h1>
+    <section id="user-data">
+      
+      <label for="task-name">Task name:</label>
+      <input type="text" id="task-name" placeholder="Study JavaScript..." required>
+      <label for="deadline">Due date:</label>
+      <input type="date" id="deadline" required>
+      <label for="location">Location (optional):</label>
+      <input type="text" id="location" placeholder="123 Main St...">
+
+      <label for="task-type">Task Type:</label>
+      <select name="task-type" id="task-type">
+        <option value="Work" selected>Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Errand">Errand</option>
+      </select>
+
+      <div class="for-textarea">
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" placeholder="Code a lot..." rows="10"></textarea>
+      </div>
+
+      <div class="btn-container">
+        <button id="create-btn" type="submit">CREATE</button>
+        <a href="index.html"><button id="goback-btn">GO BACK</button></a>
+      </div>
+    </section>
+    
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
